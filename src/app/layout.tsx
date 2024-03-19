@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Zen_Maru_Gothic } from "next/font/google";
 
-import Header from "./_/components/Header";
+import Header from "@_/components/Header";
 
-import "./_/styles/globals.css";
+import "@_/styles/globals.css";
 
 const inter = Zen_Maru_Gothic({ weight: "400", subsets: ["latin"] });
 

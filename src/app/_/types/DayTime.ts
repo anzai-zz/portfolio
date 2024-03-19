@@ -15,3 +15,5 @@ type mm = `${0|1|2|3|4}${oneToZero}` | `5${oneToNine}`;
 
 export type Time = `${HH}:${mm}`;
 
+export type DayTime = `${yyyy}-${MM}-${dd} ${HH}:${mm}`;
+

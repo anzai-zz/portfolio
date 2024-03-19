@@ -14,7 +14,7 @@ export const entrydata: Entrydata = {
 export default function Page() {
 
   return (
-    <p>test</p>
+    <h1>{metadata.title}</h1>
   );
 }
 

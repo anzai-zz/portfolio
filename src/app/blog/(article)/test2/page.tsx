@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 
 export const entrydata: Entrydata = {
   date: "2024-03-18",
-  tag: ["js"],
+  tag: ["other"],
 };
 
 export default function Page() {
 
   return (
-    <p>test2</p>
+    <h1>{metadata.title}</h1>
   );
 }
