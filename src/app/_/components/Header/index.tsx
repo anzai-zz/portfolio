@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function Head() {
 
   return (
     <header>
-      <h1 className="bg-black text-white pt-3 pb-4 grid place-items-center mb-16">
-        <span className="text-3xl">くろねこのみー</span>
+      <h1 className="bg-black text-white p-4 grid place-items-center mb-16">
+        <Link className="text-3xl" href="/">くろねこのみー</Link>
       </h1>
     </header>
   );
