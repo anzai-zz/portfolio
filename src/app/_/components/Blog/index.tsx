@@ -12,7 +12,6 @@ type Props = {
 };
 
 export default async function Blog({ page = 1, max, tag, pagination = false }: Props) {
-  const test = await glob("**/page.tsx");
   const paths = await glob("**/src/app/blog/(article)/*", { ignore: "**/*.tsx" });
 
   const list = await Promise.all(paths.map(async (path) => {
@@ -44,9 +43,6 @@ export default async function Blog({ page = 1, max, tag, pagination = false }: P
 
   return (
     <>
-      {
-        JSON.stringify(test)
-      }
       <ul>
         {
           sliceList.map(({ title, link, date }) => {
