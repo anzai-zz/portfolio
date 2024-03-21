@@ -10,7 +10,7 @@ type Props = {
 
 export async function generateStaticParams() {
 
-  return [{ page: [1] }];
+  return [{ page: ["1", "2"] }];
 }
 
 export default async function Page({ params }: Props) {
