@@ -1,6 +1,10 @@
+import React from "react";
+
 import Link from "next/link";
 import { basename } from "node:path";
 import { glob } from "glob";
+
+import Pagination from "@_/components/Pagination";
 
 type Props = {
   page?: number,
@@ -15,7 +19,8 @@ export default async function Blog({ page = 1, max, tag, pagination = false }: P
   const paths = await glob("src/app/blog/(article)/*", { ignore: "**/*.tsx" });
 
   const list = await Promise.all(paths.map(async (path) => {
-    const { metadata, entrydata } = await import(`@/app/blog/(article)/${basename(path)}/page`);
+    const { default: myDefault, metadata, entrydata } = await import(`@/app/blog/(article)/${basename(path)}/page`);
+
 
     return {
       title: metadata.title as string,
@@ -56,26 +61,7 @@ export default async function Blog({ page = 1, max, tag, pagination = false }: P
           })
         }
       </ul>
-      {
-        pagination && (
-          <ol className="m-7 flex justify-center gap-4">
-            <li>
-              {
-                page !== 1 && (
-                  <Link href={`/blog/tag/${tag}/${page !== 2 ? page - 1 : ""}`}>前へ</Link>
-                )
-              }
-            </li>
-            <li>
-              {
-                filterList.length > max * page && (
-                  <Link href={`/blog/tag/${tag}/${page + 1}`}>次へ</Link>
-                )
-              }
-            </li>
-          </ol>
-        )
-      }
+      {pagination && <Pagination list={filterList} href={tag ? `/blog/tag/${tag}/` : "/blog/"} page={page} max={max} />}
     </>
   );
 }

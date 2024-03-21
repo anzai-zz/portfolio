@@ -11,10 +11,19 @@ export const entrydata: Entrydata = {
   tag: ["other"],
 };
 
+function Date({ children }) {
+  return (
+    <p>{children}</p>
+  );
+}
+
 export default function Page() {
 
   return (
-    <h1>{metadata.title}</h1>
+    <>
+      <h1>{metadata.title}</h1>
+      <Date>2024-03-19</Date>
+    </>
   );
 }
 
