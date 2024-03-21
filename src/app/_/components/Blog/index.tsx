@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default async function Blog({ page = 1, max, tag, pagination = false }: Props) {
-  const test = await glob("*");
+  const test = await glob("../*");
 
   const paths = await glob("**/src/app/blog/(article)/*", { ignore: "**/*.tsx" });
 
