@@ -1,5 +1,3 @@
-import React from "react";
-
 import Link from "next/link";
 import { basename } from "node:path";
 import { glob } from "glob";
@@ -14,8 +12,7 @@ type Props = {
 };
 
 export default async function Blog({ page = 1, max, tag, pagination = false }: Props) {
-  const test = await glob("../*");
-
+  const test = await glob("**/page.tsx");
   const paths = await glob("**/src/app/blog/(article)/*", { ignore: "**/*.tsx" });
 
   const list = await Promise.all(paths.map(async (path) => {
