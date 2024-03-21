@@ -45,6 +45,9 @@ export default async function Blog({ page = 1, max, tag, pagination = false }: P
 
   return (
     <>
+      {
+        JSON.stringify(paths)
+      }
       <ul>
         {
           sliceList.map(({ title, link, date }) => {
