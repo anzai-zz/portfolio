@@ -1,5 +1,7 @@
 import Blog from "@_/components/Blog";
 
+export const dynamic = "force-dynamic";
+
 type Props = {
   params: {
     page: number,
