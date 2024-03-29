@@ -6,25 +6,31 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "npx biome lint ./src",
+    "format": "npx biome format --write ./src",
+    "migrate": "dotenv -e .env.local -- npx prisma migrate dev -name $npm_config_name",
+    "generate": "prisma generate",
+    "studio": "dotenv -e .env.local -- npx prisma studio"
   },
   "dependencies": {
-    "glob": "^10.3.10",
+    "@formkit/tempo": "^0.0.17",
+    "@prisma/client": "^5.11.0",
+    "linaria": "^6.1.0",
     "next": "14.1.0",
+    "next-with-linaria": "^0.7.0",
     "nodemailer": "^6.9.13",
+    "prisma": "^5.11.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "valibot": "^0.30.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.6.3",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.14",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "dotenv-cli": "^7.4.1",
     "typescript": "^5"
   },
   "volta": {

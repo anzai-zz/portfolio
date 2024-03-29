@@ -1,63 +1,85 @@
+import { format } from "@formkit/tempo";
 import Link from "next/link";
-import { basename } from "node:path";
-import { glob } from "glob";
 
 import Pagination from "@_/components/Pagination";
+import prisma from "@_/libs/prisma";
+
+import tagList, { type TagSlug } from "@_/data/tag";
+
+import * as styles from "./styles/index.css";
 
 type Props = {
-  page?: number,
-  max: number,
-  tag?: string,
-  pagination?: boolean,
+  page?: number;
+  max: number;
+  tag?: TagSlug;
+  pagination?: boolean;
 };
 
-export default async function Blog({ page = 1, max, tag, pagination = false }: Props) {
-  const paths = await glob("**/src/app/blog/(article)/*", { ignore: "**/*.tsx" });
+export default async function Blog({
+  page = 1,
+  max,
+  tag: tagText,
+  pagination = false,
+}: Props) {
+  const where: { tag?: { has: TagSlug } } = {};
 
-  const list = await Promise.all(paths.map(async (path) => {
-    const { default: myDefault, metadata, entrydata } = await import(`@/app/blog/(article)/${basename(path)}/page`);
-
-
-    return {
-      title: metadata.title as string,
-      date: entrydata.date as string,
-      tag: entrydata.tag as string[],
-      link: `/blog/${basename(path)}/`,
+  if (tagText) {
+    where.tag = {
+      has: tagText,
     };
-  }));
+  }
 
-  // 日付順
-  list.sort((a, b) => {
-    return a.date <= b.date ? 1 : -1;
+  const all = await prisma.blog.count({ where });
+
+  const list = await prisma.blog.findMany({
+    where,
+    orderBy: {
+      updatedAt: "desc",
+    },
+    skip: max * (page - 1),
+    take: max,
   });
-
-  // 件数
-
-
-  // タグで絞り込み
-  const filterList = tag ? list.filter((item) => {
-    return item.tag.includes(tag);
-  }) : list;
-
-  const sliceList = filterList.slice(max * (page - 1), max * page);
 
   return (
     <>
       <ul>
-        {
-          sliceList.map(({ title, link, date }) => {
-            return (
-              <li key={link} className="border-b border-b-gray">
-                <Link href={link} className="block p-4">
-                  <time className="mb-2 block">{date}</time>
-                  <h3 className="font-bold text-lg">{title}</h3>
-                </Link>
-              </li>
-            );
-          })
-        }
+        {list.map(({ title, id, tag, updatedAt }) => {
+          return (
+            <li key={id} className={styles.item}>
+              <Link href={`/blog/${id}`} className={styles.link}>
+                <div className={styles.info}>
+                  <time
+                    className={styles.time}
+                    dateTime={format(updatedAt, "YYYY-MM-DD")}
+                  >
+                    {format(updatedAt, "long", "ja")}
+                  </time>
+                  {tag ? (
+                    <ul className={styles.tag}>
+                      {tag.map((slug) => {
+                        return (
+                          <li key={slug} className={styles.tagItem}>
+                            {tagList[slug as TagSlug]}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : undefined}
+                </div>
+                <h3 className={styles.title}>{title}</h3>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
-      {pagination && <Pagination list={filterList} href={tag ? `/blog/tag/${tag}/` : "/blog/"} page={page} max={max} />}
+      {pagination && (
+        <Pagination
+          all={all}
+          href={tagText ? `/blog/tag/${tagText}/` : "/blog/"}
+          page={page}
+          max={max}
+        />
+      )}
     </>
   );
 }

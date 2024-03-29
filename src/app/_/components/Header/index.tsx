@@ -1,11 +1,14 @@
 import Link from "next/link";
 
-export default function Head() {
+import * as styls from "./styles/index.css";
 
+export default function Header() {
   return (
-    <header>
-      <h1 className="bg-black text-white p-4 grid place-items-center mb-16">
-        <Link className="text-3xl" href="/">くろねこのみー</Link>
+    <header className={styls.header}>
+      <h1>
+        <Link className={styls.link} href="/">
+          くろねこのみー
+        </Link>
       </h1>
     </header>
   );
