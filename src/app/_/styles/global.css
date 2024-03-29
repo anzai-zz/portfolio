@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a:where(:any-link) {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  width: 12px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000
+}

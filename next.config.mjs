@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+import withLinaria from "next-with-linaria";
+
 const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
 };
 
-export default nextConfig;
+export default withLinaria(nextConfig);
