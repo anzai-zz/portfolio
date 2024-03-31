@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import type React from "react";
 
-import prisma from "@_/libs/prisma";
+import prisma from "@src/app/_/utils/prisma";
 
 import tagList, { type TagSlug } from "@_/data/tag";
 
