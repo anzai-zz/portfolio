@@ -20,15 +20,6 @@
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 2
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "double",
-      "jsxQuoteStyle": "double",
-      "trailingComma": "all",
-      "semicolons": "always"
-    }
+    "indentStyle": "space"
   }
 }
