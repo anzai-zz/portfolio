@@ -2,7 +2,7 @@ import { format } from "@formkit/tempo";
 import Link from "next/link";
 
 import Pagination from "@_/components/Pagination";
-import prisma from "@_/libs/prisma";
+import prisma from "@_/utils/prisma";
 
 import tagList, { type TagSlug } from "@_/data/tag";
 
