@@ -13,10 +13,7 @@ export default function Page() {
   });
 
   return (
-    <form
-      action={dispatch}
-      key={state?.success ? "reset" : ""}
-    >
+    <form action={dispatch} key={state?.success ? "reset" : ""}>
       <ul className={styles.list}>
         <li className={styles.item}>
           <label className={styles.label}>

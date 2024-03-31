@@ -2,7 +2,7 @@
 
 import { useFormStatus } from "react-dom";
 
-import * as styles from "./styles/index.css"
+import * as styles from "./styles/index.css";
 
 export default function Submit() {
   const { pending } = useFormStatus();
