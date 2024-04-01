@@ -1,6 +1,8 @@
 import { format } from "@formkit/tempo";
 import Link from "next/link";
 
+import type React from "react";
+
 import Pagination from "@_/components/Pagination";
 import prisma from "@_/utils/prisma";
 
@@ -43,30 +45,32 @@ export default async function Blog({
   return (
     <>
       <ul>
-        {list.map(({ title, id, tag, updatedAt }) => {
+        {list.map(({ title, id, tag, updatedAt, color }) => {
           return (
             <li key={id} className={styles.item}>
-              <Link href={`/blog/${id}`} className={styles.link}>
-                <div className={styles.info}>
-                  <time
-                    className={styles.time}
-                    dateTime={format(updatedAt, "YYYY-MM-DD")}
-                  >
-                    {format(updatedAt, "long", "ja")}
-                  </time>
-                  {tag ? (
-                    <ul className={styles.tag}>
-                      {tag.map((slug) => {
-                        return (
-                          <li key={slug} className={styles.tagItem}>
-                            {tagList[slug as TagSlug]}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  ) : undefined}
+              <Link href={`/blog/${id}`} className={styles.link} style={{ "--color": color } as React.CSSProperties}>
+                <div>
+                  <div className={styles.info}>
+                    <time
+                      className={styles.time}
+                      dateTime={format(updatedAt, "YYYY-MM-DD")}
+                    >
+                      {format(updatedAt, "long", "ja")}
+                    </time>
+                    {tag ? (
+                      <ul className={styles.tag}>
+                        {tag.map((slug) => {
+                          return (
+                            <li key={slug} className={styles.tagItem}>
+                              {tagList[slug as TagSlug]}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    ) : undefined}
+                  </div>
+                  <h3 className={styles.title}>{title}</h3>
                 </div>
-                <h3 className={styles.title}>{title}</h3>
               </Link>
             </li>
           );

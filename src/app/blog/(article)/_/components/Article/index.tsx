@@ -15,6 +15,7 @@ type Props = {
   title: string;
   update?: string;
   tag?: TagSlug[];
+  color?: string,
   del?: boolean;
 };
 
@@ -24,6 +25,7 @@ export default async function Article({
   title,
   update,
   tag,
+  color = "#cc3b3b",
   del,
 }: Props) {
   if (del) {
@@ -43,11 +45,13 @@ export default async function Article({
       title,
       updatedAt: update ? `${update}T00:00:00+09:00` : undefined,
       tag,
+      color,
     },
     create: {
       id,
       title,
       tag,
+      color,
     },
   });
 

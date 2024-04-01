@@ -1,7 +1,7 @@
 import { css } from "@linaria/core";
 
 export const submit = css`
-  background-color: #000;
+  background-color: #cc3b3b;
   color: #fff;
   display: block;
   text-align: center;
@@ -13,4 +13,5 @@ export const submit = css`
   border-radius: 5px;
   font-size: 1.4rem;
   cursor: pointer;
+  border: 0;
 `;

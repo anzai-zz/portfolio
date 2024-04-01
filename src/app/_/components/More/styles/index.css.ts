@@ -1,7 +1,7 @@
 import { css } from "@linaria/core";
 
 export const more = css`
-  background-color: #000;
+  background-color: #cc3b3b;
   color: #fff;
   display: block;
   text-align: center;

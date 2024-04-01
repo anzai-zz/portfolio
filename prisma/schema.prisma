@@ -19,4 +19,5 @@ model Blog {
   updatedAt DateTime @default(now())
   title     String   @db.VarChar(255)
   tag       String[] @default([])
+  color     String   @default("")
 }
