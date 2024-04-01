@@ -67,4 +67,3 @@ export const submit = css`
   font-size: 1.4rem;
   cursor: pointer;
 `;
-

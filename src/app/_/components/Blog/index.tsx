@@ -18,14 +18,14 @@ type Props = {
 export default async function Blog({
   page = 1,
   max,
-  tag: tagText,
+  tag: tagSlug,
   pagination = false,
 }: Props) {
   const where: { tag?: { has: TagSlug } } = {};
 
-  if (tagText) {
+  if (tagSlug) {
     where.tag = {
-      has: tagText,
+      has: tagSlug,
     };
   }
 
@@ -75,7 +75,7 @@ export default async function Blog({
       {pagination && (
         <Pagination
           all={all}
-          href={tagText ? `/blog/tag/${tagText}/` : "/blog/"}
+          href={tagSlug ? `/blog/tag/${tagSlug}/` : "/blog/"}
           page={page}
           max={max}
         />
