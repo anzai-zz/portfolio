@@ -6,7 +6,7 @@ import Contact from "@_/components/Contact";
 
 import * as styles from "@_/styles/page.css";
 
-export default async function Page() {
+export default function Page() {
   return (
     <>
       <section className={styles.section}>

@@ -1,10 +1,14 @@
+import Image from "next/image";
+
+import photo from "./images/photo.svg";
+
 import * as styles from "./styles/index.css";
 
 export default function Profile() {
   return (
     <div className={styles.profile}>
       <div className={styles.photo}>
-        <img src="" alt="" />
+        <Image src={photo} alt="誠意撮影中" />
       </div>
       <table className={styles.table}>
         <tbody>
@@ -35,6 +39,7 @@ export default function Profile() {
               <ul className={styles.skill}>
                 <li className={styles.skillItem}>PHP</li>
                 <li className={styles.skillItem}>SQL</li>
+                <li className={styles.skillItem}>GraphQL</li>
                 <li className={styles.skillItem}>Vue</li>
                 <li className={styles.skillItem}>Nuxt</li>
               </ul>
