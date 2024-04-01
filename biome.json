@@ -4,6 +4,7 @@
     "enabled": true
   },
   "linter": {
+    "ignore": ["**/*.test.js", "**/*.test.jsx", "**/*.test.ts", "**/*.test.tsx"],
     "enabled": true,
     "rules": {
       "all": true,
