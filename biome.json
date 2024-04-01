@@ -13,8 +13,7 @@
         "useNamingConvention": "off"
       },
       "suspicious": {
-        "noExplicitAny": "warn",
-        "useAwait": "off"
+        "noExplicitAny": "warn"
       }
     }
   },

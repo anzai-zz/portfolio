@@ -10,7 +10,7 @@ type Props = {
   };
 };
 
-export default async function Page({ params }: Props) {
+export default function Page({ params }: Props) {
   return (
     <>
       <SectionTitle>「{tagList[params.slug]}」の記事</SectionTitle>
