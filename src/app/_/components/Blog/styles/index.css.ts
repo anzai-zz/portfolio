@@ -1,14 +1,22 @@
 import { css } from "@linaria/core";
 
 export const item = css`
-  border-bottom: 2px solid #000;
 `;
 
 export const link = css`
   text-decoration: none;
   color: inherit;
-  padding: 15px;
-  display: block;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    aspect-ratio: 1 / 1;
+    width: 70px;
+    background-color: var(--color);
+  }
 `;
 
 export const info = css`

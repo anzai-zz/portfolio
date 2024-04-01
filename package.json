@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "npx biome lint ./src",
     "format": "npx biome format --write ./src",
-    "migrate": "dotenv -e .env.local -- npx prisma migrate dev -name $npm_config_name",
+    "migrate": "dotenv -e .env.local -- npx prisma migrate dev --name migrate",
     "generate": "prisma generate",
     "studio": "dotenv -e .env.local -- npx prisma studio",
     "test": "jest"
