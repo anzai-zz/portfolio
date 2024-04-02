@@ -38,12 +38,11 @@ export const tag = css`
 
 export const tagItem = css`
   display: block;
-  background-color: #000;
-  color: #fff;
+  background-color: #f5f5f5;
   font-size: 1.4rem;
   line-height: 1.1;
   padding: 2px 10px;
-  border-radius: 3px;
+  border-radius: 3px; 
 `;
 
 export const title = css`
