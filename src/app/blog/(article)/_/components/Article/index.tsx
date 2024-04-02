@@ -79,7 +79,7 @@ export default async function Article({
           </ul>
         ) : undefined}
       </div>
-      <div className={styles.body}>{children}</div>
+      {children}
     </article>
   );
 }

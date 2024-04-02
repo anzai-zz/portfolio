@@ -16,7 +16,7 @@ export default function Profile() {
         <tbody>
           <tr className={styles.row}>
             <th className={styles.head}>名前</th>
-            <td className={styles.detail}>安齋 祐樹</td>
+            <td className={styles.detail}>Anzai Yuki</td>
             <th className={styles.head}>居住地</th>
             <td className={styles.detail}>福島県</td>
           </tr>
