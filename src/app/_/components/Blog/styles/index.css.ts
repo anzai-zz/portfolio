@@ -16,6 +16,7 @@ export const link = css`
     aspect-ratio: 1 / 1;
     width: 70px;
     background-color: var(--color);
+    border-radius: 5px;
   }
 `;
 
