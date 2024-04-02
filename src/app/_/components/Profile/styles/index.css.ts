@@ -3,7 +3,7 @@ import { css } from "@linaria/core";
 export const profile = css`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 40px;
 `;
 
 export const photo = css`
@@ -64,4 +64,18 @@ export const historyHead = css`
 
 export const historyDetail = css`
   vertical-align: top;
+`;
+
+export const sns = css`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+`;
+
+export const snsIcon = css`
+  display: block;
+  width: 40px;
+  background-color: #000;
+  padding: 8px;
+  border-radius: 5px;
 `;

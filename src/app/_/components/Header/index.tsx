@@ -7,7 +7,8 @@ export default function Header() {
     <header className={styls.header}>
       <h1>
         <Link className={styls.link} href="/">
-          くろねこのみー
+          <span className={styls.title}>くろねこのみー</span>
+          <span className={styls.sub}>ポートフォリオ</span>
         </Link>
       </h1>
     </header>

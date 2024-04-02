@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 import photo from "./images/photo.svg";
+import x from "./images/x.svg";
+import threads from "./images/threads.svg";
 
 import * as styles from "./styles/index.css";
 
@@ -71,31 +73,35 @@ export default function Profile() {
             </td>
           </tr>
           <tr className={styles.row}>
-            <th className={styles.head}>SNS等</th>
+            <th className={styles.head}>SNS</th>
             <td className={styles.detail} colSpan={3}>
-              <p>
+              <ul className={styles.sns}>
+                <li>
+                  <a
+                    href="https://twitter.com/gzzdino"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.snsIcon}
+                  >
+                    <Image src={x} alt="X" />
+                  </a>
+                </li>
+                <li>
                 <a
-                  href="https://twitter.com/gzzdino"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  X
-                </a>
-              </p>
-              <p>
-                <a
-                  href="https://www.threads.net/@zzdino"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Threads
-                </a>
-              </p>
-              <p>
+                    href="https://www.threads.net/@zzdino"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.snsIcon}
+                  >
+                    <Image src={threads} alt="Threads" />
+                  </a>
+                </li>
+              </ul>
+              {/* <p>
                 <a href="https://q-az.net/" target="_blank" rel="noreferrer">
                   大昔の技術ブログ
                 </a>
-              </p>
+              </p> */}
             </td>
           </tr>
         </tbody>
