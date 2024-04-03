@@ -1,9 +1,15 @@
 import { css } from "@linaria/core";
 
+import { pc } from "@_/styles/mediaquery";
+
 export const header = css`
   background-color: #000;
   padding: 15px;
-  margin: 0 0 100px;
+  margin: 0 0 60px;
+
+  ${pc} {
+    margin: 0 0 100px;
+  }
 `;
 
 export const link = css`
@@ -12,9 +18,13 @@ export const link = css`
 `;
 
 export const title = css`
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   display: block;
   text-align: center;
+
+  ${pc} {
+    font-size: 2.5rem;
+  }
 `;
 
 export const sub = css`
@@ -22,6 +32,7 @@ export const sub = css`
   text-align: center;
   justify-content: center;
   margin: 10px 0 0;
+  font-size: inherit;
 
   &::before {
     content: "～";

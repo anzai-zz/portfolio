@@ -1,9 +1,14 @@
 import { css } from "@linaria/core";
 
+import { pc } from "@_/styles/mediaquery";
+
 export const profile = css`
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 40px;
+
+  ${pc} {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const photo = css`
@@ -19,9 +24,20 @@ img {
 export const table = css`
   width: 100%;
   align-self: flex-start;
+  display: grid;
+
+  ${pc} {
+    grid-template-columns: repeat(4, 1fr); 
+  }
 `;
 
-export const row = css``;
+export const tbody = css`
+  display: contents;
+`;
+
+export const row = css`
+  display: contents;
+`;
 
 export const head = css`
   text-align: left;
