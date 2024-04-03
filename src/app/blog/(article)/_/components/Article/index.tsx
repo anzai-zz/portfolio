@@ -56,7 +56,7 @@ export default async function Article({
   });
 
   return (
-    <article>
+    <article style={{ "--color": color} as React.CSSProperties}>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.info}>
         <time

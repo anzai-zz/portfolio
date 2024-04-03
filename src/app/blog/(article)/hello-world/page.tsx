@@ -4,6 +4,7 @@ import Article from "../_/components/Article";
 import P from "../_/components/P";
 import Section from "../_/components/Section";
 import Title from "../_/components/Title";
+import B from "../_/components/B";
 
 import type { TagSlug } from "@_/data/tag";
 
@@ -25,11 +26,12 @@ export default function Page() {
         <P>その後、アメブロからレンタルサーバを借りてWordPressでブログを作成。そのまましばらく技術ブログをやってました。今みたいにQiitaがあったりZennがあったりではなかったので、技術ブログするならWordPress作るか、はてなブログでやるかみたいな感じだった気がします。</P>
       </Section>
       <Section>
-        <Title>前職</Title>
+        <Title>前職（HP制作会社）</Title>
         <P>上記のような経験を活かしたいなと思ったので、HP制作会社を探し、入社することができました。</P>
         <P>当時のWordPressの知識があったものの、就職した会社は「WordPressを使わずCMSをフルスクラッチで制作」という変わった会社でした。<br />レンタルサーバを使うものの、PHPのみでCMSをクライアントに合わせて開発し提供する会社でした。</P>
         <P>「コーダー」として入社したものの、PHPでのプログラム部分もやってみたく独学。最終的にはフレームワークなどを用いずMySQLとPHPだけでCMSや会員サイトを作成できるレベルの仕事まで行っていました。</P>
-        <P>また、PHPのみでゴリゴリのCMSも作成していたのですが、ReactとReact Routerを用いてSPAで管理画面を作成し、レンタルサーバが主なクライアントの環境だったこともあり、APIはPHPで書き、そえを</P>
+        <P>また、<B>PHPのみでゴリゴリのCMS</B>も作成していたのですが、ReactとReact Routerを用いてSPAで管理画面を作成し、レンタルサーバが主なクライアントの環境だったこともあり、APIはPHPで書き、それをSPA側で受けてCMSを作成していました。</P>
+        <P></P>
       </Section>
     </Article>
   );

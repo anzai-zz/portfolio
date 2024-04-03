@@ -1,6 +1,7 @@
 "use client";
 
 import { useFormState } from "react-dom";
+// import { useActionState } from "react";
 
 import post from "./actions/post";
 import Submit from "./components/Submit";
@@ -8,6 +9,7 @@ import Submit from "./components/Submit";
 import * as styles from "./styles/index.css";
 
 export default function Page() {
+
   const [state, dispatch] = useFormState(post, {
     error: false,
   });

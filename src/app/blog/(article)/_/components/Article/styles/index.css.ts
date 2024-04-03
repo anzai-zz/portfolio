@@ -2,7 +2,7 @@ import { css } from "@linaria/core";
 
 export const title = css`
   font-size: 2rem;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--color);
   padding: 0 0 10px;
   margin: 0 0 10px;
 `;
