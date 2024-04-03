@@ -42,6 +42,7 @@ export default function Profile() {
                 <li className={styles.skillItem}>PHP</li>
                 <li className={styles.skillItem}>SQL</li>
                 <li className={styles.skillItem}>GraphQL</li>
+                <li className={styles.skillItem}>webpack</li>
                 <li className={styles.skillItem}>Vue</li>
                 <li className={styles.skillItem}>Nuxt</li>
               </ul>
