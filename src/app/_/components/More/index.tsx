@@ -1,4 +1,5 @@
 import Link from "next/link";
+import clsx from "clsx";
 
 import type React from "react";
 
@@ -12,7 +13,7 @@ type Props = {
 
 export default function More({ href, className, children }: Props) {
   return (
-    <Link href={href} className={`${styles.more} ${className}`}>
+    <Link href={href} className={clsx(styles.more, className)}>
       {children}
     </Link>
   );
