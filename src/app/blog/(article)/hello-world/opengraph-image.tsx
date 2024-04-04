@@ -4,9 +4,7 @@ import { metadata } from "./page";
 
 export const runtime = "edge";
 
-// const font = fetch(
-//   "http://localhost:3000/assets/zenmaru.ttf"
-// ).then((res) => res.arrayBuffer());
+const font = fetch("/assets/zenmaru.ttf").then((res) => res.arrayBuffer());
 
 export default function Ogp() {
   // const fontData = await font;
