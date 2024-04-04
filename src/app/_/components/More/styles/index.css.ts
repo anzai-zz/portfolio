@@ -8,7 +8,7 @@ export const more = css`
   display: block;
   text-align: center;
   margin: 20px auto 0;
-  min-width: min(400px, 100%);
+  min-width: min(400px, 100%); 
   width: fit-content;
   text-decoration: none;
   padding: 10px;

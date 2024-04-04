@@ -32,10 +32,9 @@ export const table = css`
   width: 100%;
   align-self: flex-start;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1.2fr 1fr;
-  gap: 10px;
 
   ${pc} {
+    grid-template-columns: 1.2fr 1fr 1.2fr 1fr; 
     gap: 25px 10px;
   }
 `;
@@ -58,18 +57,18 @@ export const head = css`
 `;
 
 export const detail = css`
-  /* margin: 0 0 15px;
+  margin: 0 0 15px;
 
   ${pc} {
     margin: 0;
-  } */
+  }
 `;
 
 export const detailCol3 = css`
 
-  /* ${pc} { */
+  ${pc} {
     grid-column: 2 / 5;
-  /* } */
+  }
 `;
 
 export const skill = css``;
