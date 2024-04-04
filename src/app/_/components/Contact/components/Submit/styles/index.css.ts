@@ -19,5 +19,6 @@ export const submit = css`
 
   ${pc} {
     padding: 15px;
+    margin: 70px auto 0;
   }
 `;
