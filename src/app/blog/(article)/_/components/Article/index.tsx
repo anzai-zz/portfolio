@@ -65,7 +65,7 @@ export default async function Article({
         >
           {format(updatedAt, "long", "ja")}
         </time>
-        {tag ? (
+        {/* {tag ? (
           <ul className={styles.tag}>
             {tag.map((slug) => {
               return (
@@ -77,7 +77,7 @@ export default async function Article({
               );
             })}
           </ul>
-        ) : undefined}
+        ) : undefined} */}
       </div>
       {children}
     </article>

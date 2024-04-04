@@ -1,8 +1,10 @@
 import Image from "next/image";
+import clsx from "clsx";
 
 import photo from "./images/photo.svg";
 import x from "./images/x.svg";
 import threads from "./images/threads.svg";
+import github from "./images/github.svg";
 
 import * as styles from "./styles/index.css";
 
@@ -22,9 +24,7 @@ export default function Profile() {
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>誕生日</th>
-            <td className={styles.detail}>1985年4月19日</td>
-            <th className={styles.head} />
-            <td className={styles.detail} />
+            <td className={clsx(styles.detail, styles.detailCol3)}>1985年4月19日</td>
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>好きなこと</th>
@@ -45,24 +45,21 @@ export default function Profile() {
                 <li className={styles.skillItem}>SQL</li>
                 <li className={styles.skillItem}>GraphQL</li>
                 <li className={styles.skillItem}>webpack</li>
-                <li className={styles.skillItem}>Vue</li>
-                <li className={styles.skillItem}>Nuxt</li>
+                <li className={styles.skillItem}>Astro</li>
               </ul>
             </td>
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>出来ないこと</th>
-            <td className={styles.detail}>
+            <td className={clsx(styles.detail, styles.detailCol3)}>
               <ul className={styles.skill}>
                 <li className={styles.skillItem}>デザイン</li>
               </ul>
             </td>
-            <th className={styles.head} />
-            <td className={styles.detail} />
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>略歴</th>
-            <td className={styles.detail} colSpan={3}>
+            <td className={clsx(styles.detail, styles.detailCol3)}>
               <table className={styles.history}>
                 <tbody>
                   <tr className={styles.historyRow}>
@@ -76,12 +73,10 @@ export default function Profile() {
                 </tbody>
               </table>
             </td>
-            <th className={styles.head} />
-            <td className={styles.detail} />
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>SNS</th>
-            <td className={styles.detail} colSpan={3}>
+            <td className={clsx(styles.detail, styles.detailCol3)}>
               <ul className={styles.sns}>
                 <li>
                   <a
@@ -101,6 +96,16 @@ export default function Profile() {
                     className={styles.snsIcon}
                   >
                     <Image src={threads} alt="Threads" />
+                  </a>
+                </li>
+                <li>
+                <a
+                    href="https://github.com/anzai-zz"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.snsIcon}
+                  >
+                    <Image src={github} alt="GitHub" />
                   </a>
                 </li>
               </ul>
