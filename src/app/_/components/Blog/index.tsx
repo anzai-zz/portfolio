@@ -57,7 +57,7 @@ export default async function Blog({
                     >
                       {format(updatedAt, "long", "ja")}
                     </time>
-                    {tag ? (
+                    {/* {tag ? (
                       <ul className={styles.tag}>
                         {tag.map((slug) => {
                           return (
@@ -67,7 +67,7 @@ export default async function Blog({
                           );
                         })}
                       </ul>
-                    ) : undefined}
+                    ) : undefined} */}
                   </div>
                   <h3 className={styles.title}>{title}</h3>
                 </div>

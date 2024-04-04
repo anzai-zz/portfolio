@@ -1,5 +1,7 @@
 import { css } from "@linaria/core";
 
+import { pc } from "@_/styles/mediaquery";
+
 export const footer = css`
   position: relative;
 `;
@@ -8,7 +10,11 @@ export const neko = css`
   position: absolute;
   right: 10px;
   bottom: calc(100% - 1px);
-  width: 70px;
+  width: 50px;
+
+  ${pc} {
+    width: 70px;
+  }
 `;
 
 export const copyright = css`

@@ -1,5 +1,7 @@
 import { css } from "@linaria/core";
 
+import { pc } from "@_/styles/mediaquery";
+
 export const item = css`
 `;
 
@@ -14,9 +16,13 @@ export const link = css`
   &::before {
     content: "";
     aspect-ratio: 1 / 1;
-    width: 70px;
+    width: 50px;
     background-color: var(--color);
     border-radius: 5px;
+
+    ${pc} {
+      width: 70px;
+    }
   }
 `;
 
@@ -42,7 +48,7 @@ export const tagItem = css`
   font-size: 1.4rem;
   line-height: 1.1;
   padding: 2px 10px;
-  border-radius: 3px; 
+  border-radius: 3px;
 `;
 
 export const title = css`

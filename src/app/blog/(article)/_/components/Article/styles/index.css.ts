@@ -1,10 +1,16 @@
 import { css } from "@linaria/core";
 
+import { pc } from "@_/styles/mediaquery";
+
 export const title = css`
-  font-size: 2rem;
+  font-size: 1.6rem;
   border-bottom: 2px solid var(--color);
   padding: 0 0 10px;
   margin: 0 0 10px;
+
+  ${pc} {
+    font-size: 2rem;
+  }
 `;
 
 export const info = css`

@@ -13,12 +13,19 @@ export const profile = css`
 
 export const photo = css`
   aspect-ratio: 1 / 1;
+  width: 50%;
+  margin: 0 auto;
 
-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
+  ${pc} {
+    width: auto;
+    margin: 0;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const table = css`
@@ -27,7 +34,8 @@ export const table = css`
   display: grid;
 
   ${pc} {
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: 1.2fr 1fr 1.2fr 1fr;
+    gap: 25px 10px;
   }
 `;
 
@@ -41,13 +49,26 @@ export const row = css`
 
 export const head = css`
   text-align: left;
-  padding: 10px 20px 10px 0;
-  vertical-align: top;
+  margin: 0 0 5px;
+
+  ${pc} {
+    margin: 0;
+  }
 `;
 
 export const detail = css`
-  padding: 10px 0;
-  vertical-align: top;
+  margin: 0 0 15px;
+
+  ${pc} {
+    margin: 0;
+  }
+`;
+
+export const detailCol3 = css`
+
+  ${pc} {
+    grid-column: 2 / 5;
+  }
 `;
 
 export const skill = css``;
@@ -68,7 +89,6 @@ export const skillItem = css`
 `;
 
 export const history = css`
-  width: 100%;
 `;
 
 export const historyRow = css``;
@@ -76,6 +96,7 @@ export const historyRow = css``;
 export const historyHead = css`
   text-align: left;
   vertical-align: top;
+  padding: 0 20px 0 0;
 `;
 
 export const historyDetail = css`
