@@ -32,9 +32,11 @@ export const table = css`
   width: 100%;
   align-self: flex-start;
   display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px 20px;
 
   ${pc} {
-    grid-template-columns: 1.2fr 1fr 1.2fr 1fr; 
+    grid-template-columns: 1.2fr 1fr 1.2fr 1fr;
     gap: 25px 10px;
   }
 `;
@@ -49,19 +51,9 @@ export const row = css`
 
 export const head = css`
   text-align: left;
-  margin: 0 0 5px;
-
-  ${pc} {
-    margin: 0;
-  }
 `;
 
 export const detail = css`
-  margin: 0 0 15px;
-
-  ${pc} {
-    margin: 0;
-  }
 `;
 
 export const detailCol3 = css`
