@@ -9,7 +9,7 @@ import Title from "../_/components/Title";
 import type { TagSlug } from "@_/data/tag";
 
 const id = "hello-world";
-const title = "ポートフォリオを開設しました";
+const title = "ポートフォリオを作成しました";
 const tag: TagSlug[] = ["news"];
 const color = "#f25a7b";
 
