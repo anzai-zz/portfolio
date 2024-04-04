@@ -1,11 +1,13 @@
 import { format } from "@formkit/tempo";
 import Link from "next/link";
+import Image from "next/image";
 
 import type React from "react";
 
-import prisma from "@src/app/_/utils/prisma";
-
+import prisma from "@_/utils/prisma";
 import tagList, { type TagSlug } from "@_/data/tag";
+import x from "./images/x.svg";
+import facebook from "./images/facebook.svg";
 
 import * as styles from "./styles/index.css";
 
@@ -80,6 +82,24 @@ export default async function Article({
         ) : undefined} */}
       </div>
       {children}
+      <dl className={styles.share}>
+        <dt className={styles.shareTitle}>share</dt>
+        <dd>
+          <ul className={styles.shareList}>
+            <li>
+              <a href={`https://twitter.com/share?url=${encodeURI(`https://kuronekono.me/${id}`)}&text=${encodeURI(title)}`} className={styles.shareX}>
+                <Image src={x} alt="xで記事をシェア" />
+              </a>
+            </li>
+            <li>
+              <a href={`https://www.facebook.com/sharer.php?u=${encodeURI(`https://kuronekono.me/${id}`)}`} className={styles.shareFacebook}>
+                <Image src={facebook} alt="Facebookで記事をシェア" />
+              </a>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+
     </article>
   );
 }

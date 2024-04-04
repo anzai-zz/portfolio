@@ -12,8 +12,12 @@ import * as styles from "@_/styles/layout.css";
 const inter = Zen_Maru_Gothic({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ポートフォリオ",
-  description: "ポートフォリオ",
+  metadataBase: new URL("https://kuronekono.me"),
+  title: {
+    default: "くろねこのみー ～ポートフォリオ～",
+    template: "%s - くろねこのみー"
+  },
+  description: "福島在住のフロントエンドエンジニアのポートフォリオです",
 };
 
 export default function RootLayout({

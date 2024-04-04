@@ -39,3 +39,41 @@ export const tagLink = css`
   padding: 2px 10px;
   border-radius: 3px;
 `;
+
+export const share = css`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  margin: 60px 0 0;
+
+  ${pc} {
+    margin: 100px 0 0;
+  }
+`;
+
+export const shareTitle = css`
+  font-weight: bold;
+  text-transform: capitalize;
+`;
+
+export const shareList = css`
+  display: flex;
+  gap: 20px;
+`;
+
+export const shareX = css`
+  background-color: #000;
+  display: block;
+  width: 40px;
+  padding: 10px;
+  border-radius: 5px;
+`;
+
+export const shareFacebook = css`
+  background-color: #0866ff;
+  display: block;
+  width: 40px;
+  padding: 6px;
+  border-radius: 5px;
+`
