@@ -4,16 +4,12 @@ import { metadata } from "./page";
 
 export const runtime = "edge";
 
-export default function Ogp() {
-  // console.log(new URL("../../", import.meta.url))
-  // console.log(new URL("../../_/assets/zenmaru.ttf", import.meta.url))
+const font = fetch(
+  "http://localhost:3000/assets/zenmaru.ttf"
+).then((res) => res.arrayBuffer());
 
-  // const font = fetch(
-  //   new URL("../../../_/assets/zenmaru.ttf", import.meta.url)
-  // ).then((res) => res.arrayBuffer());
-
-  // console.log("font", font);
-
+export default async function Ogp() {
+  const fontData = await font;
 
   return new ImageResponse(
     <div
@@ -68,6 +64,13 @@ export default function Ogp() {
     {
       width: 1200,
       height: 630,
+      fonts: [
+        {
+          name: 'Typewriter',
+          data: fontData,
+          style: 'normal',
+        },
+      ],
     },
   );
 }
