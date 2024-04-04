@@ -2,7 +2,11 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export function GET() {
+export async function GET() {
+  const fontData = await fetch(
+    new URL('../../../../../assets/zenmaru.ttf', import.meta.url),
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     <div
       style={{
@@ -42,6 +46,13 @@ export function GET() {
     {
       width: 1200,
       height: 630,
+      fonts: [
+        {
+          name: 'Typewriter',
+          data: fontData,
+          style: 'normal',
+        },
+      ],
     },
   );
 }
