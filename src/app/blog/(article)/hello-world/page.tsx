@@ -32,7 +32,7 @@ export default function Page() {
         <P>コーダーとして入社したものの、PHPでのプログラム部分もやってみたく独学。最終的にはフレームワークなどを用いずMySQLとPHPだけでCMSや会員サイトを作成する仕事まで行っていました。</P>
         <P>また、SPAが流行り始めたころから、ReactとReact Routerを用いてSPAで管理画面を作成、APIはPHPで書きフロントエンド・バックエンド両方を書いていました。</P>
         <P>Next.jsでpageルーター、APIはGraphQLで会員サイトを複数作成。運営。</P>
-        <P>通常のレンタルサーバでHPを作成する場合は、webpackを使ってReactをトランスパイルすることが多く、他SassやPugなどのテンプレートの知識もあります。</P>
+        <P>通常のレンタルサーバでHPを作成する場合はwebpackを使ってReactをトランスパイルすることが多く、他SassやPugなどのテンプレートの知識もあります。</P>
       </Section>
     </Article>
   );
