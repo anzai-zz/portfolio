@@ -20,7 +20,7 @@ export default async function postAction(_prev: any, formData: FormData) {
 
     await mail.sendMail({
       from: email as string,
-      to: "mail@kuronokono.me",
+      to: "mail@kuronekono.me",
       subject: "お問い合わせフォームより",
       text: `
 お名前：${name}
