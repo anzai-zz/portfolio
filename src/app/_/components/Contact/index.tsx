@@ -24,8 +24,9 @@ export default function Page() {
               type="text"
               name="name"
               required
-              aria-required="true" 
+              aria-required="true"
               title="お名前"
+              autoComplete="name"
             />
           </label>
         </li>
@@ -39,6 +40,7 @@ export default function Page() {
               required
               aria-required="true"
               title="メールアドレス"
+              autoComplete="email"
             />
           </label>
         </li>
