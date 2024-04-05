@@ -105,7 +105,7 @@ export default function Profile() {
                     href="https://github.com/anzai-zz"
                     target="_blank"
                     rel="noreferrer"
-                    className={styles.snsIcon}
+                    className={clsx(styles.snsIcon, styles.snsGitHub)}
                   >
                     <Image src={github} alt="GitHub" />
                   </a>

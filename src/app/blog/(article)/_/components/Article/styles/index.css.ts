@@ -59,7 +59,7 @@ export const shareTitle = css`
 
 export const shareList = css`
   display: flex;
-  gap: 20px;
+  gap: 15px;
 `;
 
 export const shareX = css`

@@ -64,7 +64,7 @@ export default function Page() {
           他には、Next、pageルーター、APIはGraphQLの構成で会員サイトを複数作成、運営等も行っていました。
         </P>
         <P>
-          通常のレンタルサーバでHPを作成する際はwebpackを使ってReactをトランスパイルしたり、他GulpやSassやPugなどもその時々の流行で便利そうなものは使っていました。Vue、Nuxtも一時期利用をしていましたが、しばらく触っていないので知識は抜ていて、WordPressの知識もだいぶ前で止まっています。
+          通常のレンタルサーバでHPを作成する際はwebpackを使ってReactをトランスパイルしたり、他GulpやSassやPugなどもその時々の流行で便利そうなものは使っていました。Vue、Nuxtも一時期利用をしていましたが、しばらく触っていないので知識は抜けていて、WordPressの知識もだいぶ前で止まっています。
         </P>
       </Section>
       <Section>
