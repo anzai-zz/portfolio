@@ -19,7 +19,7 @@ export default function Page() {
         <Profile />
       </section>
       <section>
-        <SectionTitle>contact</SectionTitle>
+        <SectionTitle id="formTitle">contact</SectionTitle>
         <Contact />
       </section>
     </>

@@ -76,4 +76,4 @@ export const shareFacebook = css`
   width: 40px;
   padding: 6px;
   border-radius: 5px;
-`
+`;

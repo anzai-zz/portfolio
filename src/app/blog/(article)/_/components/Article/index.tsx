@@ -17,7 +17,7 @@ type Props = {
   title: string;
   update?: string;
   tag?: TagSlug[];
-  color?: string,
+  color?: string;
   del?: boolean;
 };
 
@@ -58,7 +58,7 @@ export default async function Article({
   });
 
   return (
-    <article style={{ "--color": color} as React.CSSProperties}>
+    <article style={{ "--color": color } as React.CSSProperties}>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.info}>
         <time
@@ -87,19 +87,28 @@ export default async function Article({
         <dd>
           <ul className={styles.shareList}>
             <li>
-              <a href={`https://twitter.com/share?url=${encodeURI(`https://kuronekono.me/${id}`)}&text=${encodeURI(title)}`} className={styles.shareX}>
+              <a
+                href={`https://twitter.com/share?url=${encodeURI(
+                  `https://kuronekono.me/${id}`,
+                )}&text=${encodeURI(title)}`}
+                className={styles.shareX}
+              >
                 <Image src={x} alt="xで記事をシェア" />
               </a>
             </li>
             <li>
-              <a href={`https://www.facebook.com/sharer.php?u=${encodeURI(`https://kuronekono.me/${id}`)}`} className={styles.shareFacebook}>
+              <a
+                href={`https://www.facebook.com/sharer.php?u=${encodeURI(
+                  `https://kuronekono.me/${id}`,
+                )}`}
+                className={styles.shareFacebook}
+              >
                 <Image src={facebook} alt="Facebookで記事をシェア" />
               </a>
             </li>
           </ul>
         </dd>
       </dl>
-
     </article>
   );
 }

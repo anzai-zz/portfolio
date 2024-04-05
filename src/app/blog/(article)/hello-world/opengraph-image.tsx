@@ -54,9 +54,13 @@ export default function Ogp() {
             margin: "0 15px 0 0",
           }}
         />
-        <div style={{
-          fontSize: 30,
-        }}>くろねこのみー</div>
+        <div
+          style={{
+            fontSize: 30,
+          }}
+        >
+          くろねこのみー
+        </div>
       </div>
     </div>,
     {

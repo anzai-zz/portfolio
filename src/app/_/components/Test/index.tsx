@@ -7,7 +7,9 @@ export default function Test() {
 
   return (
     <>
-      <button type="button" onClick={() => setCount((prev) => prev + 1)}>{count}ボタンだよ</button>
+      <button type="button" onClick={() => setCount((prev) => prev + 1)}>
+        {count}ボタンだよ
+      </button>
     </>
   );
 }

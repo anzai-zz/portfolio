@@ -48,7 +48,11 @@ export default async function Blog({
         {list.map(({ title, id, tag, updatedAt, color }) => {
           return (
             <li key={id} className={styles.item}>
-              <Link href={`/blog/${id}`} className={styles.link} style={{ "--color": color } as React.CSSProperties}>
+              <Link
+                href={`/blog/${id}`}
+                className={styles.link}
+                style={{ "--color": color } as React.CSSProperties}
+              >
                 <div>
                   <div className={styles.info}>
                     <time

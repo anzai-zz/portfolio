@@ -9,18 +9,24 @@ import Submit from "./components/Submit";
 import * as styles from "./styles/index.css";
 
 export default function Page() {
-
   const [state, dispatch] = useFormState(post, {
     error: false,
   });
 
   return (
-    <form action={dispatch} key={state?.success ? "reset" : ""}>
+    <form action={dispatch} key={state?.success ? "reset" : ""} aria-labelledby="formTitle">
       <ul className={styles.list}>
         <li className={styles.item}>
           <label className={styles.label}>
             <span className={styles.head}>お名前</span>
-            <input className={styles.input} type="text" name="name" required />
+            <input
+              className={styles.input}
+              type="text"
+              name="name"
+              required
+              aria-required="true" 
+              title="お名前"
+            />
           </label>
         </li>
         <li className={styles.item}>
@@ -31,13 +37,21 @@ export default function Page() {
               type="email"
               name="email"
               required
+              aria-required="true"
+              title="メールアドレス"
             />
           </label>
         </li>
         <li className={styles.item}>
           <label className={styles.label}>
             <span className={styles.head}>お問い合わせ内容</span>
-            <textarea className={styles.textarea} name="content" required />
+            <textarea
+              className={styles.textarea}
+              name="content"
+              required
+              aria-required="true"
+              title="お問い合わせ内容"
+            />
           </label>
         </li>
       </ul>
