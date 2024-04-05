@@ -108,3 +108,7 @@ export const snsIcon = css`
   padding: 8px;
   border-radius: 5px;
 `;
+
+export const snsGitHub = css`
+  background-color: #1f2328;
+`
