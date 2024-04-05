@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { Zen_Maru_Gothic } from "next/font/google";
 
 import type React from "react";
+import type { Metadata } from "next";
 
 import Footer from "@_/components/Footer";
 import Header from "@_/components/Header";
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   description: "福島在住のフロントエンドエンジニアのポートフォリオです",
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
   },
 };
 
