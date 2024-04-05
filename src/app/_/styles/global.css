@@ -5,6 +5,9 @@ html {
 
 body {
   font-size: 1.4rem;
+  text-align: justify;
+  word-break: break-all;
+  line-height: 1.625;
 
   @media (width >= 1000px) {
     font-size: 1.6rem;
