@@ -54,3 +54,8 @@ table {
 ::-webkit-scrollbar-thumb {
   background-color: #000
 }
+
+::selection {
+  background-color: #cc3b3b;
+  color: #fff;
+}
