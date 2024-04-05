@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   description: "福島在住のフロントエンドエンジニアのポートフォリオです",
   twitter: {
     card: "summary",
-    creator: "@gzzdino"
+    creator: "@gzzdino",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#cc3b3b',
-}
+  themeColor: "#cc3b3b",
+};
 
 export default function RootLayout({
   children,

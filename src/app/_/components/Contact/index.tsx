@@ -14,7 +14,11 @@ export default function Page() {
   });
 
   return (
-    <form action={dispatch} key={state?.success ? "reset" : ""} aria-labelledby="formTitle">
+    <form
+      action={dispatch}
+      key={state?.success ? "reset" : ""}
+      aria-labelledby="formTitle"
+    >
       <ul className={styles.list}>
         <li className={styles.item}>
           <label className={styles.label}>

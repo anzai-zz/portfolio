@@ -111,4 +111,4 @@ export const snsIcon = css`
 
 export const snsGitHub = css`
   background-color: #1f2328;
-`
+`;
