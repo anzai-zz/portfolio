@@ -1,7 +1,8 @@
 import { Zen_Maru_Gothic } from "next/font/google";
+import clsx from "clsx";
 
 import type React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import Footer from "@_/components/Footer";
 import Header from "@_/components/Header";
@@ -20,8 +21,13 @@ export const metadata: Metadata = {
   description: "福島在住のフロントエンドエンジニアのポートフォリオです",
   twitter: {
     card: "summary",
+    creator: "@gzzdino"
   },
 };
+
+export const viewport: Viewport = {
+  themeColor: '#cc3b3b',
+}
 
 export default function RootLayout({
   children,
@@ -30,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${inter.className} ${styles.body}`}>
+      <body className={clsx(inter.className, styles.body)}>
         <Header />
         <main className={styles.main}>{children}</main>
         <Footer />
