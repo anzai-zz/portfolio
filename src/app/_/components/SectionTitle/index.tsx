@@ -4,9 +4,13 @@ import * as styles from "./styles/index.css";
 
 type Props = {
   children: React.ReactNode;
-  id?: string,
+  id?: string;
 };
 
 export default function SectionTitle({ children, id }: Props) {
-  return <h2 className={styles.title} id={id}>{children}</h2>;
+  return (
+    <h2 className={styles.title} id={id}>
+      {children}
+    </h2>
+  );
 }

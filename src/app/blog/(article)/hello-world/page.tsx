@@ -36,11 +36,11 @@ export default function Page() {
           塾長時代に始めたアメーバブログがきっかけでweb制作に興味を持ち、HTML、CSS、JavaScript、jQueryあたりをよく勉強していました。
         </P>
         <P>
-          アメーバブログからWordPressに移行し、技術ブログを開始。（
+          アメーバブログからWordPressに移行し、技術ブログを開始(
           <a href="https://q-az.net/" target="_blank" rel="noreferrer">
             q-az
           </a>
-          ）。更新は現在止まり中です。
+          )。更新は現在止まり中です。
         </P>
       </Section>
       <Section>
@@ -69,7 +69,10 @@ export default function Page() {
       </Section>
       <Section>
         <Title>その他</Title>
-        <P>ポートフォリオ自体はNext製のappルーター、記事部分はpageファイルで作成したかったので、記事一覧を作成するのにsupabaseを使ってます。犬（トイプードル）1匹と猫（保護猫 ※黒猫ではない）2匹と生活中。</P>
+        <P>
+          ポートフォリオ自体はNext製のappルーター、記事部分はpageファイルで作成したかったので、記事一覧を作成するのにsupabaseを使ってます。犬（トイプードル）1匹と猫（保護猫
+          ※黒猫ではない）2匹と生活中。
+        </P>
       </Section>
     </Article>
   );
