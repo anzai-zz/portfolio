@@ -1,10 +1,10 @@
-import Image from "next/image";
 import clsx from "clsx";
+import Image from "next/image";
 
-import photo from "./images/photo.svg";
-import x from "./images/x.svg";
-import threads from "./images/threads.svg";
 import github from "./images/github.svg";
+import photo from "./images/photo.svg";
+import threads from "./images/threads.svg";
+import x from "./images/x.svg";
 
 import * as styles from "./styles/index.css";
 

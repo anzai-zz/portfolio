@@ -6,7 +6,7 @@ import type React from "react";
 import Pagination from "@_/components/Pagination";
 import prisma from "@_/utils/prisma";
 
-import tagList, { type TagSlug } from "@_/data/tag";
+import type { TagSlug } from "@_/data/tag";
 
 import * as styles from "./styles/index.css";
 

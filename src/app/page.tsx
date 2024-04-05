@@ -1,8 +1,8 @@
 import Blog from "@_/components/Blog";
-import More from "@_/components/More";
-import SectionTitle from "@_/components/SectionTitle";
-import Profile from "@_/components/Profile";
 import Contact from "@_/components/Contact";
+import More from "@_/components/More";
+import Profile from "@_/components/Profile";
+import SectionTitle from "@_/components/SectionTitle";
 
 import * as styles from "@_/styles/page.css";
 
