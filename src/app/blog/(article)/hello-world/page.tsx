@@ -13,9 +13,11 @@ const title = "ポートフォリオを作成しました";
 const tag: TagSlug[] = ["news"];
 const color = "#f25a7b";
 
+const update = "2024-04-05";
+
 export default function Page() {
   return (
-    <Article id={id} title={title} tag={tag} color={color}>
+    <Article id={id} title={title} tag={tag} color={color} update={update}>
       <P>会社を辞めフリーランスになったのでポートフォリオを作成しました。</P>
       <P>
         今後は、フリーのフロントエンドエンジニアとして個人で活動していきます。
@@ -67,7 +69,7 @@ export default function Page() {
       </Section>
       <Section>
         <Title>その他</Title>
-        <P>犬（トイプードル）1匹と猫（保護猫 ※黒猫ではない）2匹と生活中。</P>
+        <P>ポートフォリオ自体はNext製のappルーター、記事部分はpageファイルで作成したかったので、記事一覧を作成するのにsupabaseを使ってます。犬（トイプードル）1匹と猫（保護猫 ※黒猫ではない）2匹と生活中。</P>
       </Section>
     </Article>
   );
