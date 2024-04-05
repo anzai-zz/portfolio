@@ -21,6 +21,7 @@ export const title = css`
   font-size: 1.8rem;
   display: block;
   text-align: center;
+  margin: 0 0 5px;
 
   ${pc} {
     font-size: 2.5rem;
@@ -31,7 +32,6 @@ export const sub = css`
   display: flex;
   text-align: center;
   justify-content: center;
-  margin: 10px 0 0;
   font-size: inherit;
 
   &::before {
