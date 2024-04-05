@@ -1,8 +1,8 @@
-import { Zen_Maru_Gothic } from "next/font/google";
 import clsx from "clsx";
+import { Zen_Maru_Gothic } from "next/font/google";
 
-import type React from "react";
 import type { Metadata, Viewport } from "next";
+import type React from "react";
 
 import Footer from "@_/components/Footer";
 import Header from "@_/components/Header";

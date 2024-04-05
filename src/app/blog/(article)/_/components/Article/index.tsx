@@ -1,13 +1,12 @@
 import { format } from "@formkit/tempo";
-import Link from "next/link";
 import Image from "next/image";
 
 import type React from "react";
 
+import type { TagSlug } from "@_/data/tag";
 import prisma from "@_/utils/prisma";
-import tagList, { type TagSlug } from "@_/data/tag";
-import x from "./images/x.svg";
 import facebook from "./images/facebook.svg";
+import x from "./images/x.svg";
 
 import * as styles from "./styles/index.css";
 
