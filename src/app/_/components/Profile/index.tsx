@@ -12,7 +12,7 @@ export default function Profile() {
   return (
     <div className={styles.profile}>
       <div className={styles.photo}>
-        <Image src={photo} alt="誠意撮影中" />
+        <Image src={photo} alt="誠意撮影中" loading="eager" />
       </div>
       <table className={styles.table}>
         <tbody className={styles.tbody}>
@@ -24,7 +24,9 @@ export default function Profile() {
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>誕生日</th>
-            <td className={clsx(styles.detail, styles.detailCol3)}>1985年4月19日</td>
+            <td className={clsx(styles.detail, styles.detailCol3)}>
+              1985年4月19日
+            </td>
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>好きなこと</th>
@@ -89,7 +91,7 @@ export default function Profile() {
                   </a>
                 </li>
                 <li>
-                <a
+                  <a
                     href="https://www.threads.net/@zzdino"
                     target="_blank"
                     rel="noreferrer"
@@ -99,7 +101,7 @@ export default function Profile() {
                   </a>
                 </li>
                 <li>
-                <a
+                  <a
                     href="https://github.com/anzai-zz"
                     target="_blank"
                     rel="noreferrer"

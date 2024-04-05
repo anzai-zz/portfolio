@@ -21,7 +21,7 @@ describe("Testコンポーネント", () => {
   it("カウント計測テスト", () => {
     render(<Test />);
 
-    const onButtonElement = screen.getByRole('button');
+    const onButtonElement = screen.getByRole("button");
     screen.debug(onButtonElement);
 
     fireEvent.click(onButtonElement);
@@ -30,5 +30,5 @@ describe("Testコンポーネント", () => {
 
     expect(onButtonElement.textContent).not.toBe("1ボタンだよ");
     expect(onButtonElement.textContent).toBe("3ボタンだよ");
-  })
+  });
 });

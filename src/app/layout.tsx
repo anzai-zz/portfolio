@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kuronekono.me"),
   title: {
     default: "くろねこのみー ～ポートフォリオ～",
-    template: "%s - くろねこのみー"
+    template: "%s - くろねこのみー",
   },
   description: "福島在住のフロントエンドエンジニアのポートフォリオです",
   twitter: {
     card: "summary_large_image",
-  }
+  },
 };
 
 export default function RootLayout({

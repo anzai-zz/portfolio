@@ -1,10 +1,8 @@
 import { ImageResponse } from "next/og";
 
-
 export const runtime = "edge";
 
 export default function Ogp() {
-
   return new ImageResponse(
     <div
       style={{
