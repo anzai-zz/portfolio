@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@formkit/tempo": "^0.0.19",
+    "@linaria/core": "^6.1.0",
     "@prisma/client": "^5.12.0",
     "clsx": "^2.1.0",
     "linaria": "^6.1.0",
