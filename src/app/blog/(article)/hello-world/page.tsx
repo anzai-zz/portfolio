@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import type { Metadata } from "next";
 
 import Article from "../_/components/Article";
@@ -6,7 +8,13 @@ import Section from "../_/components/Section";
 import Title from "../_/components/Title";
 // import B from "../_/components/B";
 
+import family01 from "./_/images/01.jpg";
+import family02 from "./_/images/02.jpg";
+import family03 from "./_/images/03.jpg";
+
 import type { TagSlug } from "@_/data/tag";
+
+import * as styles from "./_/styles/index.css";
 
 const id = "hello-world";
 const title = "ポートフォリオを作成しました";
@@ -18,7 +26,7 @@ const update = "2024-04-05";
 export default function Page() {
   return (
     <Article id={id} title={title} tag={tag} color={color} update={update}>
-      <P>会社を辞めフリーランスになったのでポートフォリオを作成しました。</P>
+      <P>会社を辞めフリーになったのでポートフォリオを作成しました。</P>
       <P>
         今後は、フリーのフロントエンドエンジニアとして個人で活動していきます。
         <br />
@@ -49,7 +57,7 @@ export default function Page() {
           塾退職後、いくつかの派遣の仕事などを経てコーダーとしてホームページ制作会社に就職。
         </P>
         <P>
-          WordPressの知識がありましたが、就職した会社は「WordPressを使わずCMSをフルスクラッチで制作」という変わった会社でした。
+          就職した会社は「WordPressを使わずCMSをフルスクラッチで制作」という変わった会社でした。
           <br />
           レンタルサーバを使うものの、PHPのみでCMSをクライアントに合わせて開発し提供するという方針。
         </P>
@@ -74,6 +82,17 @@ export default function Page() {
           ※黒猫ではない）2匹と生活中。
         </P>
       </Section>
+      <ul className={styles.list}>
+        <li>
+          <Image src={family01} alt="" />
+        </li>
+        <li>
+          <Image src={family02} alt="" />
+        </li>
+        <li>
+          <Image src={family03} alt="" />
+        </li>
+      </ul>
     </Article>
   );
 }
