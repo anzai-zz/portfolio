@@ -69,7 +69,7 @@ export default function Profile() {
                     <td className={styles.historyDetail}>個別指導塾の塾長</td>
                   </tr>
                   <tr className={styles.historyRow}>
-                    <th className={styles.historyHead}>2018 - 2024</th>
+                    <th className={styles.historyHead}>2017 - 2024</th>
                     <td className={styles.historyDetail}>HP制作会社勤務</td>
                   </tr>
                 </tbody>
