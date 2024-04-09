@@ -12,7 +12,7 @@ export default function Profile() {
   return (
     <div className={styles.profile}>
       <div className={styles.photo}>
-        <Image src={photo} alt="誠意撮影中" priority />
+        <Image src={photo} alt="誠意撮影中" loading="eager" />
       </div>
       <table className={styles.table}>
         <tbody className={styles.tbody}>

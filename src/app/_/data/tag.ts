@@ -1,6 +1,7 @@
 const tagList = {
   js: "JavaScript",
   ts: "TypeScript",
+  react: "React",
   news: "News",
 } as const;
 
