@@ -31,7 +31,7 @@ export default async function Article({
   del,
 }: Props) {
   if (del) {
-    await prisma.blog.delete({
+    await prisma.blog.deleteMany({
       where: {
         id,
       },
