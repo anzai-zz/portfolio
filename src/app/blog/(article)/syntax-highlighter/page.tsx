@@ -17,7 +17,7 @@ const color = "#80fd9f";
 
 export default function Page() {
   return (
-    <Article id={id} title={title} tag={tag} color={color}>
+    <Article id={id} title={title} tag={tag} color={color} del>
       <P>シンタックスハイライトしたいので専用のコンポーネントを作ります。</P>
       <Section>
         <Title>コンポーネント</Title>
