@@ -1,9 +1,10 @@
 import { format } from "@formkit/tempo";
 import Image from "next/image";
+import Link from "next/link";
 
 import type React from "react";
 
-import type { TagSlug } from "@_/data/tag";
+import tagList, { type TagSlug } from "@_/data/tag";
 import prisma from "@_/utils/prisma";
 import facebook from "./images/facebook.svg";
 import x from "./images/x.svg";
@@ -66,7 +67,7 @@ export default async function Article({
         >
           {format(updatedAt, "long", "ja")}
         </time>
-        {/* {tag ? (
+        {tag ? (
           <ul className={styles.tag}>
             {tag.map((slug) => {
               return (
@@ -78,7 +79,7 @@ export default async function Article({
               );
             })}
           </ul>
-        ) : undefined} */}
+        ) : undefined}
       </div>
       {children}
       <dl className={styles.share}>

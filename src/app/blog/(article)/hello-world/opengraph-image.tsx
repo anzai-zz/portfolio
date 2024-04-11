@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
-import { metadata } from "./page";
 import loadGoogleFont from "@_/utils/font";
+import { metadata } from "./page";
 
 export const runtime = "edge";
 
@@ -70,9 +70,9 @@ export default async function Ogp() {
       height: 630,
       fonts: [
         {
-          name: 'Typewriter',
+          name: "Typewriter",
           data: font,
-          style: 'normal',
+          style: "normal",
         },
       ],
     },

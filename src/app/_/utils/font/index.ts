@@ -1,6 +1,6 @@
 /**
  * 参考：https://zenn.dev/temasaguru/articles/2968736b5a2f41
- * 
+ *
  * Google FontsのCSSファイルから、
  * フォントURL `src: url(ここ) format(truetype OR opentype)` を探し、
  * 見つかればfetchしてArrayBufferにして返す
@@ -20,12 +20,12 @@ export default async function loadGoogleFont({
   text?: string;
 }) {
   const params = new URLSearchParams({
-    family: `${family}${weight ? `:wght@${weight}` : ''}`,
+    family: `${family}${weight ? `:wght@${weight}` : ""}`,
   });
   if (text) {
-    params.append('text', text);
+    params.append("text", text);
   } else {
-    params.append('subset', 'latin');
+    params.append("subset", "latin");
   }
 
   const url = `https://fonts.googleapis.com/css2?${params.toString()}`;
@@ -33,11 +33,11 @@ export default async function loadGoogleFont({
   const css = await fetch(url).then((res) => res.text());
 
   const fontUrl = css.match(
-    /src: url\((.+)\) format\('(opentype|truetype)'\)/
+    /src: url\((.+)\) format\('(opentype|truetype)'\)/,
   )?.[1];
 
   if (!fontUrl) {
-    throw new Error('Font file not found in CSS fetched from Google Fonts');
+    throw new Error("Font file not found in CSS fetched from Google Fonts");
   }
 
   return fetch(fontUrl).then((res) => res.arrayBuffer());
