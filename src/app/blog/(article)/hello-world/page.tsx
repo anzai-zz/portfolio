@@ -14,7 +14,7 @@ import family03 from "./_/images/03.jpg";
 
 import type { TagSlug } from "@_/data/tag";
 
-import * as styles from "./_/styles/index.css";
+import * as styles from "./_/styles/page.css";
 
 const id = "hello-world";
 const title = "ポートフォリオを作成しました";
