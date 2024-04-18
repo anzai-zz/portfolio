@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Source_Code_Pro } from "next/font/google";
 
-import Prism from 'prismjs';
+import Prism from "prismjs";
 
 import "prismjs/components/prism-typescript.min";
 import "prismjs/components/prism-jsx.min";
@@ -14,12 +14,16 @@ const inter = Source_Code_Pro({ weight: ["400", "700"], subsets: ["latin"] });
 
 type Props = {
   children: string;
-  language: "javascript" | "typescript" |"jsx" | "tsx";
+  language: "javascript" | "typescript" | "jsx" | "tsx" | "html" | "css";
   title?: string;
 };
 
 export default function Code({ children, title, language }: Props) {
-  const hightlightCode = Prism.highlight(children, Prism.languages[language], language);
+  const hightlightCode = Prism.highlight(
+    children,
+    Prism.languages[language],
+    language,
+  );
 
   // 改行ごとに分割
   const splitCode = hightlightCode.split(/\n/);
@@ -29,7 +33,7 @@ export default function Code({ children, title, language }: Props) {
     (_, index) => index && index + 1 !== splitCode.length,
   );
 
-   // 最初の行のスペースを数える
+  // 最初の行のスペースを数える
   const firstLine = filterCode[0];
   const space = (firstLine.match(/^\s*/) as RegExpMatchArray)[0].length ?? 0;
 
