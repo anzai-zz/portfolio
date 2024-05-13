@@ -14,6 +14,10 @@ export default function Page() {
     error: false,
   });
 
+  // const [state, dispatch, isPending] = useActionState(post, {
+  //   error: false,
+  // });
+
   return (
     <form
       action={dispatch}
