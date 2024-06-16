@@ -18,11 +18,11 @@ export default function Profile() {
         <tbody className={styles.tbody}>
           <tr className={styles.row}>
             <th className={styles.head}>居住地</th>
-            <td className={clsx(styles.detail, styles.detailCol3)}>福島県</td>
+            <td className={styles.detail}>福島県</td>
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>好きなこと</th>
-            <td className={clsx(styles.detail, styles.detailCol3)}>
+            <td className={styles.detail}>
               <ul className={styles.skill}>
                 <li className={styles.skillItem}>JavaScript</li>
                 <li className={styles.skillItem}>TypeScript</li>
