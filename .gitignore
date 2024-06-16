@@ -40,3 +40,7 @@ next-env.d.ts
 .vscode
 
 /illustrator/
+
+*storybook.log
+
+storybook-static

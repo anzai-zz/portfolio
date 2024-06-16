@@ -17,16 +17,8 @@ export default function Profile() {
       <table className={styles.table}>
         <tbody className={styles.tbody}>
           <tr className={styles.row}>
-            <th className={styles.head}>名前</th>
-            <td className={styles.detail}>安齋 祐樹</td>
             <th className={styles.head}>居住地</th>
             <td className={styles.detail}>福島県</td>
-          </tr>
-          <tr className={styles.row}>
-            <th className={styles.head}>誕生日</th>
-            <td className={clsx(styles.detail, styles.detailCol3)}>
-              1985年4月19日
-            </td>
           </tr>
           <tr className={styles.row}>
             <th className={styles.head}>好きなこと</th>

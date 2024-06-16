@@ -4,6 +4,7 @@ import { useFormState } from "react-dom";
 // import { useActionState } from "react";
 
 import post from "./actions/post";
+import Input from "./components/Input";
 import Submit from "./components/Submit";
 
 import * as styles from "./styles/index.css";
@@ -12,6 +13,10 @@ export default function Page() {
   const [state, dispatch] = useFormState(post, {
     error: false,
   });
+
+  // const [state, dispatch, isPending] = useActionState(post, {
+  //   error: false,
+  // });
 
   return (
     <form
@@ -23,12 +28,9 @@ export default function Page() {
         <li className={styles.item}>
           <label className={styles.label}>
             <span className={styles.head}>お名前</span>
-            <input
-              className={styles.input}
-              type="text"
+            <Input
               name="name"
               required
-              aria-required="true"
               title="お名前"
               autoComplete="name"
             />
@@ -37,12 +39,10 @@ export default function Page() {
         <li className={styles.item}>
           <label className={styles.label}>
             <span className={styles.head}>メールアドレス</span>
-            <input
-              className={styles.input}
+            <Input
               type="email"
               name="email"
               required
-              aria-required="true"
               title="メールアドレス"
               autoComplete="email"
             />
